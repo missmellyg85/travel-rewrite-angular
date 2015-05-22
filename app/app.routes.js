@@ -5,6 +5,6 @@ angular
   	// console.log("here");
     $routeProvider
       .when('/home', { templateUrl: 'app/home/home.html'})
-      .otherwise({ redirectTo: '/' });
+      .otherwise({ redirectTo: '/home' });
     
 }]);
