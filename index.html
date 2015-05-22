@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html ng-app="travelApp">
+<html ng-app="app">
     <head>
-        <script src="bower_components/angular/angular.min.js"></script>
+        <link type="text/css" rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="app/components/components.css"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+        <script src="app/app.module.js"></script>
+        <script src="app/app.routes.js"></script>
+        <script src="app/components/header.directive.js"></script>    
+        <script src="app/components/footer.directive.js"></script>  
     </head>
     
     <body>
-    	<h1>Travel Website</h1>
+    	<header main-header></header>
+
+    	<main ng-view></main>
+
+    	<footer main-footer class="page-footer blue-grey lighten-1"></footer>
     </body>
 </html>
