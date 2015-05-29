@@ -4,7 +4,7 @@ angular
   function($routeProvider) {
   	// console.log("here");
     $routeProvider
-      .when('/home', { templateUrl: 'app/home/home.html'})
+      .when('/home', { templateUrl: 'app/home/home.html', controller: 'homeController'})
       .otherwise({ redirectTo: '/home' });
     
 }]);
