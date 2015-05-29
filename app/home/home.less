@@ -1,4 +1,21 @@
+@blue-gray-darken-3: #37474f;
+
+html {
+  //background-color:whitesmoke;
+  background-image: url('../img/binding_light.png');
+}
 .blurb {
+  background-color:whitesmoke;
+  //background-image: url('../img/binding_light.png');
+  text-align: center;
+  font-size: 2em;
+  @pad-blurb: 50px;
+  padding-top:@pad-blurb;
+  padding-bottom:@pad-blurb;
+  color: @blue-gray-darken-3;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:300;
+
   ul[rn-carousel] {
     height:50px;
     margin: 0 auto;
