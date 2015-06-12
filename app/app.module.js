@@ -1,5 +1,6 @@
 angular
 	.module('app', [
 		'ngRoute',
-		'angular-carousel'
+		'angular-carousel',
+		'firebase'
 	]);
