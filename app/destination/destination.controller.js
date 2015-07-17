@@ -1,9 +1,10 @@
-(function() {
+(function(angular) {
     'use strict';
 
-    angular
-        .module('app')
-        .controller('destinationController', Controller);
+    var app = angular
+        .module('myApp')
+        
+    app.controller('destinationController', Controller);
 
     Controller.inject = ['$scope', '$firebaseArray'];
 
@@ -23,4 +24,12 @@
         };
 
     }
-})();
+
+    app.config(['$routeProvider', function($routeProvider) {
+        $routeProvider
+            .when('/destinations', {templateUrl: 'destination/destination.html', controller: 'destinationController'})
+            .whenAuthenticated('/admin/destinations', { templateUrl: 'destination/destination.admin.html', controller: 'destinationController'});
+    }]);
+
+})(angular);
+
