@@ -1,0 +1,17 @@
+<div class="row">
+	<ul>
+      <li ng-repeat="destination in destinations">
+        <!-- edit a message -->
+        <input ng-model="destination.name" ng-change="destinations.$save(destination)" />
+        <input ng-model="destination.description" ng-change="destinations.$save(destination)" />
+        <!-- delete a message -->
+        <button ng-click="destinations.$remove(destination)">Delete Destination</button>
+      </li>
+    </ul>
+    <!-- push a new message onto the array -->
+    <form ng-submit="addDestination()">
+      <input ng-model="newDestinationName" />
+      <input ng-model="newDestinationDescription" />
+      <button type="submit">Add Destination</button>
+    </form>
+</div>
