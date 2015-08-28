@@ -2,6 +2,10 @@
   "name": "travel-rewrite-angular",
   "description": "A starter project for Angular + Firebase with AngularFire",
   "version": "1.0.0",
+  "engines": {
+    "node": "0.12.4",
+    "npm": "2.10.1"
+  },
   "homepage": "https://github.com/firebase/angularfire-seed",
   "repository": {
     "type": "git",
