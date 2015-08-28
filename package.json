@@ -33,7 +33,7 @@
   "bugs": {
     "url": "https://github.com/angular/angular-seed/issues"
   },
-  "main": "app/index.js",
+  "main": "app.js",
   "directories": {
     "test": "test"
   },
