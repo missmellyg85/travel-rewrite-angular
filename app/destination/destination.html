@@ -1,1 +1,29 @@
-destination.html
+<div class="container">
+
+    <h2>Destinations Index</h2>
+
+  <div class="row">
+    <div ng-repeat="dest in destinations" class="col s4">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title black-text">
+            {{dest.name}}<i class="material-icons right teal-text text-lighten-1">filter_vintage</i>
+          </span>
+          <p>{{dest.description}}</p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col s4"> *** FOR WHEN THE INTERNET DIES ***
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title black-text">
+            China Moon<i class="material-icons right teal-text text-lighten-1">filter_vintage</i>
+          </span>
+          <p>Some tasty Chinese food! I typically pick up an order of General Tso's chicken with a
+          side order of crab rangoons. I mean, I really only get the chicken to pretened that I'm
+          not just getting crab rangoons...
+          </p>
+        </div>
+      </div>
+    </div> -->
+  </div>

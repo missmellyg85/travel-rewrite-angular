@@ -3,7 +3,7 @@
 
     var app = angular
         .module('myApp')
-        
+
     app.controller('destinationController', Controller);
 
     Controller.inject = ['$scope', '$firebaseArray'];
@@ -11,7 +11,7 @@
     function Controller ($scope, $firebaseArray) {
 
         var ref = new Firebase("https://sweltering-fire-4732.firebaseio.com/destination");
-        
+
         // create a synchronized array
         $scope.destinations = $firebaseArray(ref);
         // add new items to the array
@@ -32,4 +32,3 @@
     }]);
 
 })(angular);
-
