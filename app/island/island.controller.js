@@ -21,11 +21,15 @@
         // add new items to the array
         // the message is automatically added to our Firebase database!
         $scope.addIsland = function() {
-            $scope.island.$add({
+            $scope.islands.$add({
                 name: $scope.newIslandName,
                 description: $scope.newIslandDescription,
                 destinationKey: $scope.newIslandDestinationKey
             });
+        };
+
+        $scope.getDestinationName =function(key){
+          return $scope.destinations.$getRecord(key).name;
         };
 
     }

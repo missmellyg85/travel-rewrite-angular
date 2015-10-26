@@ -7,8 +7,7 @@ angular.module('myApp', [
     'myApp.account',
     'myApp.chat',
     'myApp.login',
-    'angular-carousel',
-    'ui.materialize'
+    'angular-carousel'
   ])
 
   .run(['$rootScope', 'Auth', function($rootScope, Auth) {

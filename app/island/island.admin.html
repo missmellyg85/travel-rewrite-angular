@@ -6,8 +6,13 @@
     <div class="col s12">
       <div ng-repeat="island in islands" class="row card-panel grey lighten-3">
         <div class="col s4">
-          <label for="{{island.name}}_name">Name</label>
-          <input type="text" id="{{island.name}}_name" ng-model="island.name" ng-change="islands.$save(island)" />
+          <div>
+            <label for="{{island.name}}_name">Name</label>
+            <input type="text" id="{{island.name}}_name" ng-model="island.name" ng-change="islands.$save(island)" />
+          </div>
+          <div>
+            at {{getDestinationName(island.destinationKey)}}
+          </div>
         </div>
         <div class="col s6">
           <label for="{{island.description}}_desc">Description</label>
@@ -34,9 +39,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="input-field col s10">
-          <select class="" ng-model="newIslandDestinationKey" material-select watch>
-            <option ng-repeat="destination in destinations">{{destination.name}}</option>
+        <div class="col s10">
+          <label>Destination</label>
+          <select class="browser-default" ng-model="newIslandDestinationKey">
+            <option ng-repeat="destination in destinations" value="{{destination.$id}}">{{destination.name}}</option>
           </select>
         </div>
         <div class="col s2">

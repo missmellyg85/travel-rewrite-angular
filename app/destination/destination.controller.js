@@ -11,6 +11,8 @@
     function Controller ($scope, $firebaseArray) {
 
         var ref = new Firebase("https://sweltering-fire-4732.firebaseio.com/destination");
+        var islandRef = new Firebase("https://sweltering-fire-4732.firebaseio.com/island");
+        var islands = $firebaseArray(islandRef);
 
         // create a synchronized array
         $scope.destinations = $firebaseArray(ref);
@@ -21,6 +23,16 @@
                 name: $scope.newDestinationName,
                 description: $scope.newDestinationDescription
             });
+        };
+
+
+
+
+        $scope.getIslandByDestination = function(dest){
+          console.log('called');
+          var query = islandRef.orderByChild("destinationKey").equalTo(dest.$id);
+          var thing = $firebaseArray(query);
+          // console.log(thing);
         };
 
     }
