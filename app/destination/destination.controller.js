@@ -29,10 +29,11 @@
 
 
         $scope.getIslandByDestination = function(dest){
-          console.log('called');
-          var query = islandRef.orderByChild("destinationKey").equalTo(dest.$id);
-          var thing = $firebaseArray(query);
-          // console.log(thing);
+          var destIslands = [];
+          for(var i = 0; i >= islands.length; i++){
+            var island = islands[i];
+            
+          }
         };
 
     }

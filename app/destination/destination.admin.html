@@ -14,9 +14,9 @@
           <textarea id="{{dest.description}}_desc" class="materialize-textarea" ng-model="dest.description" ng-change="destinations.$save(dest)"></textarea>
         </div>
         <div class="col s2">
-          <button class="btn waves-effect waves-light" ng-click="destinations.$remove(destination)">Delete</button>
+          <button class="btn waves-effect waves-light" ng-click="destinations.$remove(dest)">Delete</button>
         </div>
-      </div>  
+      </div>
     </div>
   </div>
   <hr class="teal">
@@ -34,7 +34,7 @@
         </div>
         <div class="col s2">
           <button class="btn waves-effect waves-light" style="margin-top:50px;" ng-click="destinations.$remove(destination)">Add New</button>
-        </div>  
+        </div>
       </div>
     </form>
   </div>
