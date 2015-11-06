@@ -10,11 +10,12 @@
             {{dest.name}}<i class="material-icons right teal-text text-lighten-1">filter_vintage</i>
           </span>
           <p>{{dest.description}}</p>
-          <ul>
-            <li ng-repeat="(name, desc) in getIslandsByDestination(dest)">
-              {{name}}
+          <ul class="collapsible" data-collapsible="expandable" watch>
+            <li ng-repeat="(name,description) in getIslandsByDestination(dest)">
+                <div class="collapsible-header">{{name}}</div>
+                <div class="collapsible-body"><p>{{description}}</p></div>
             </li>
-          </ul>
+</ul>
         </div>
       </div>
     </div>
