@@ -29,7 +29,8 @@
         };
 
         $scope.getDestinationName =function(key){
-          return $scope.destinations.$getRecord(key).name;
+          var dest = $scope.destinations.$getRecord(key);
+          return dest == null ? "" : dest.name;
         };
 
     }

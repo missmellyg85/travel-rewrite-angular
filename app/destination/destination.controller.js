@@ -16,6 +16,8 @@
 
         // create a synchronized array
         $scope.destinations = $firebaseArray(ref);
+        $scope.islands = islands;
+
         // add new items to the array
         // the message is automatically added to our Firebase database!
         $scope.addDestination = function() {
@@ -25,15 +27,15 @@
             });
         };
 
-
-
-
-        $scope.getIslandByDestination = function(dest){
-          var destIslands = [];
-          for(var i = 0; i >= islands.length; i++){
+        $scope.getIslandsByDestination = function(dest){
+          var destIslands = {};
+          for(var i = 0; i < islands.length; i++){
             var island = islands[i];
-            
+            if(island.destinationKey == dest.$id){
+              destIslands[island.name] = island.description;
+            }
           }
+          return destIslands;
         };
 
     }

@@ -12,7 +12,7 @@
         $scope.promos = [
           'Visit the Bahamas for your honeymoon!',
             'Ever thought of taking a photography class? Click here to sign up.',
-            "Hogwarts may not be real, or at least you don't know it is since you're not a wizard, but at least you can go to Harry Potter world."
+            "Book with us to stay warm this winter!"
         ];
 
     }
